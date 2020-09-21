@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Hello"
+END=19
+for i in $(seq 0 $END); 
+do 
+echo "R$i"; 
+./fasta2phylip.py -i "/home/vishalr/Downloads/hw3agb/1000M1/R$i/rose.aln.true.fasta"
+echo "*************************************"
+./fasta2phylip.py -i "/home/vishalr/Downloads/hw3agb/1000M4/R$i/rose.aln.true.fasta"
+echo "*************************************"
+echo "*************************************"
+done

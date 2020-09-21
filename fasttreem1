@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Hello"
+END=19
+for i in $(seq 0 $END); 
+do 
+echo "R$i"; 
+./FastTree -nt "/home/vishalr/Downloads/hw3agb/1000M1/R$i/rose.aln.true.fasta" > "/home/vishalr/Downloads/hw3agb/1000M1/R$i/FastTree_JC"
+./FastTree -gtr -nt "/home/vishalr/Downloads/hw3agb/1000M1/R$i/rose.aln.true.fasta" > "/home/vishalr/Downloads/hw3agb/1000M1/R$i/FastTree_GTR"
+echo "*************************************"
+./FastTree -nt "/home/vishalr/Downloads/hw3agb/1000M4/R$i/rose.aln.true.fasta" > "/home/vishalr/Downloads/hw3agb/1000M4/R$i/FastTree_JC"
+./FastTree -gtr -nt "/home/vishalr/Downloads/hw3agb/1000M4/R$i/rose.aln.true.fasta" > "/home/vishalr/Downloads/hw3agb/1000M4/R$i/FastTree_GTR"
+echo "*************************************"
+echo "*************************************"
+done
+

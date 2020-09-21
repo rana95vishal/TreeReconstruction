@@ -1,0 +1,19 @@
+#!/bin/bash
+echo "Hello"
+END=19
+for i in $(seq 0 $END); 
+do 
+echo "R$i"; 
+#./fastme-2.1.5-linux64 -mN -dp -i "/home/vishalr/Downloads/hw3agb/1000M1/R$i/rose.aln.true.fasta.phylip" -o "/home/vishalr/Downloads/hw3agb/1000M1/R$i/FastME_pdist"
+./fastme-2.1.5-linux64 -mN -dJ -i "/home/vishalr/Downloads/hw3agb/1000M1/R$i/rose.aln.true.fasta.phylip" -o "/home/vishalr/Downloads/hw3agb/1000M1/R$i/FastME_JC69"
+echo "--------------------------------------"
+./fastme-2.1.5-linux64 -mN -dL -i "/home/vishalr/Downloads/hw3agb/1000M1/R$i/rose.aln.true.fasta.phylip" -o "/home/vishalr/Downloads/hw3agb/1000M1/R$i/FastME_logdet"
+echo "*************************************"
+#./fastme-2.1.5-linux64 -mN -dp -i "/home/vishalr/Downloads/hw3agb/1000M4/R$i/rose.aln.true.fasta.phylip" -o "/home/vishalr/Downloads/hw3agb/1000M4/R$i/FastME_pdist"
+./fastme-2.1.5-linux64 -mN -dJ -i "/home/vishalr/Downloads/hw3agb/1000M4/R$i/rose.aln.true.fasta.phylip" -o "/home/vishalr/Downloads/hw3agb/1000M4/R$i/FastME_JC69"
+echo "--------------------------------------"
+./fastme-2.1.5-linux64 -mN -dL -i "/home/vishalr/Downloads/hw3agb/1000M4/R$i/rose.aln.true.fasta.phylip" -o "/home/vishalr/Downloads/hw3agb/1000M4/R$i/FastME_logdet"
+echo "*************************************"
+echo "*************************************"
+done
+
